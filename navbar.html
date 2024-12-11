@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Include Font Awesome -->
+
+</head>
+<body>
+    <style>
+          /* Sidebar Navigation */
+          aside {
+            background-color: #1a1a1a;
+            color: #fff;
+            width: 250px;
+            padding: 20px;
+            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+        }
+
+        /* Style for Circular Image */
+        aside img {
+            display: block;
+            margin: 20px auto; /* Centers the image within the sidebar */
+            width: 150px; /* Adjust the size as needed */
+            height: 150px; /* Keep width and height equal for a perfect circle */
+            border-radius: 50%; /* Makes the image circular */
+            border: 4px solid #fff; /* Optional: Adds a white frame */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Optional: Adds a shadow for better visual effect */
+        }
+
+        .logo {
+            font-size: 25px;
+            font-family: 'Sriracha', cursive;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+  
+
+
+        .nav-items {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Sriracha', cursive;
+            color: #fff;
+            margin: 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-items a:hover {
+            color: #5edaf0; /* Add a hover effect */
+        }
+
+         /* Footer Styles inside Sidebar */
+         .sidebar-footer {
+            margin-top: auto; /* Pushes the footer to the bottom of the sidebar */
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid #fff; /* Optional: separates footer visually from navigation */
+            color: #fff;
+        }
+
+        .sidebar-footer a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar-footer a:hover {
+            color: #5edaf0; /* Light blue on hover */
+        }
+
+        .sidebar-footer i {
+            margin-right: 5px; /* Spacing between icon and text */
+        }
+
+
+    </style>
+     <!-- Sidebar Navigation -->
+     <aside>
+        <a href="#" class="logo"></a>
+        <img src="bg-image.jpg" alt="Vilash Kachare">
+        <a href="Index.html" class="logo">VILASH KACHARE</a>
+        <nav class="nav-items">
+            <a href="index.html">Home</a>
+            <a href="AboutUs.html">About</a>
+            <a href="Contactus.html">Contact</a>
+            <a href="works.html">works</a>
+
+            
+        </nav>
+        <div class="sidebar-footer">
+            <a href="https://www.instagram.com/vilashkachare19?igsh=dWx3aWVqYWc2ZzJx" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/15VnnnBUEh/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com/Vilashkachare19" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        
+    </aside>
+</body>
+</html>

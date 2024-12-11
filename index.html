@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vilash kachare - Portfolio</title>
+    <link rel="shortcut icon" href="vk.png" type="image/x-icon" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <style>
+        body {
+            background-image: url('bg image black.jpg');
+            background-color: #3e3e3e;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .main-content {
+            margin: auto;
+            padding: 20px;
+            width: 50%;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        h1 span.interactive {
+            display: inline-block;
+            color: #4CAF50;
+            animation: fade 3s infinite;
+        }
+
+        @keyframes fade {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        p, ul {
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin: 20px 0;
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        ul li:hover {
+            background: rgba(76, 175, 80, 0.7);
+        }
+
+        .download-cv {
+            display: block;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .download-cv a {
+            display: inline-block;
+            background: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .download-cv a:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="main-content">
+        <div class="content">
+            <h1>MYSELF,<br><strong>Vilash Kachare</strong><br>
+                <span id="roles" class="interactive">Student</span>
+            </h1>
+            <h2>WHO AM I?</h2>
+            <p>
+                Hi! I'm <strong>Vilash Kachare</strong>, a passionate Student with expertise in software, graphic design, application development, and innovative ideas. 
+                I love swimming, cooking, and problem-solving. With a strong background in computer science, I strive to create impactful and meaningful work.
+            </p>
+            <p>
+                When I'm not working, you can find me at coding events. Feel free to explore my portfolio to learn more about my work and achievements!
+            </p>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming: Python, Java, C++</li>
+                <li>Web Development: HTML, CSS, JavaScript</li>
+                <li>Graphic Design: Adobe Photoshop, Illustrator</li>
+                <li>Problem Solving & Algorithms</li>
+            </ul>
+
+            <h2>Education</h2>
+            <ul>
+                <li>Bachelor's in Computer Science & Engineering - Parul University (2023-2026)</li>
+                <li>Diploma in Computer Engineering - RMS Campus,Bakrol (2020-2023)</li>
+                <li>High School - Shreyas Vidhyalay School (2019-2020)</li>
+            </ul>
+
+            <h2>Works</h2>
+            <ul>
+                <li>Developed an hospital management system</li>
+                <li>Designed marketing materials for local businesses</li>
+                <li>Contributed to open-source projects on GitHub</li>
+            </ul>
+
+            <div class="download-cv">
+                <a href="cv.pdf" download>Download CV</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const roles = ["Student", "Developer", "Designer", "Problem Solver"];
+        let currentRole = 0;
+        const rolesElement = document.getElementById("roles");
+
+        setInterval(() => {
+            currentRole = (currentRole + 1) % roles.length;
+            rolesElement.textContent = roles[currentRole];
+        }, 4000);
+
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+
+    </script>
+</body>
+</html>

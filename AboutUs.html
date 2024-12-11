@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="shortcut icon" href="vk.png" type="image/x-icon" >
+
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-image: url('bg image black.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px 20px;
+            height: 100%;
+        }
+
+        .about-container h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            line-height: 1.8;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skill-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        /* Button to navigate back */
+        .back-btn {
+            margin-top: 30px;
+            display: inline-block;
+            text-decoration: none;
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="about-container">
+        <h1>About Me</h1>
+        <p>Hello! I'm <strong>Vilash Kachare</strong>, a passionate <em>Student, Developer, Designer,</em> and <em>Problem Solver</em>. 
+            I love creating clean, efficient, and innovative solutions that bring ideas to life. My mission is to enhance user experiences 
+            through thoughtful design and seamless functionality.</p>
+        <p>With a keen eye for design and a commitment to learning, I strive to continuously improve my skills while contributing to 
+            meaningful projects. When I'm not coding or designing, you can find me exploring new ideas and staying updated with the latest trends in technology.</p>
+
+        <h2>My Skills</h2>
+        <div class="skills">
+            <div class="skill-box">HTML & CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">UI Design</div>
+            <div class="skill-box">Problem Solving</div>
+        </div>
+        <a href="index.html" class="back-btn">Back to Home</a>
+    </div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+    
+</body>
+</html>
